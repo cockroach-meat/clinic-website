@@ -1,1 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Студия 7 — Клиника эстетической косметологии в Курске</title>
+    <meta name="description" content="Клиника эстетической косметологии Студия 7 в Курске. Услуги, врачи, оборудование, акции. Запись на приём.">
+    <!-- Единый шрифт (пример — спокойный, близкий к оригиналу) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+    <!-- ==================== HEADER (навигация) ==================== -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="/" class="logo">
+                <img src="assets/images/special.png" alt="Студия 7" class="logo__img">
+            </a>
+            
+            <!-- Десктопное меню -->
+            <nav class="nav nav--desktop">
+                <ul class="nav__list">
+                    <li><a href="#about">О центре</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#doctors">Специалисты</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                    <li><a href="licenses.html">Лицензии</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header__contacts">
+                <a href="tel:+74712305905" class="phone">+7 (4712) 305-905</a>
+                <span class="work-time">ул. Радищева 110, 5 этаж</span>
+            </div>
+            
+            <!-- Мобильное бургер-меню (кнопка) -->
+            <button class="burger" id="burgerBtn" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        
+        <!-- Мобильное меню (выпадашка) -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-menu__list">
+                <li><a href="#about">О центре</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#doctors">Специалисты</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+                <li><a href="licenses.html">Лицензии</a></li>
+            </ul>
+            <div class="mobile-menu__contacts">
+                <a href="tel:+74712305905" class="phone">+7 (4712) 305-905</a>
+                <span>ул. Радищева 110, 5 этаж</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==================== ГЛАВНЫЙ ЭКРАН (Hero) ==================== -->
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">клиника эстетической медицины</h1>
+                    <p class="hero__subtitle">С 7</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== О ЦЕНТРЕ (блок Добро пожаловать + преимущества) ==================== -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">Добро пожаловать на сайт клиники С 7</h2>
+                <p class="section-subtitle">Мы работаем более 7 лет и за это время у нас более 14 000 довольных клиентов</p>
+                
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-card__number">— II —</div>
+                        <h3>Работают только эксперты</h3>
+                        <p>Мы ответственны за результат, поэтому в нашей клинике работают только опытные специалисты с медицинским образованием.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__number">— II —</div>
+                        <h3>Профессиональное оборудование</h3>
+                        <p>Для качественных результатов мы выбрали только проверенное оборудование, имеющее Регистрационное Удостоверение от Росздравнадзора.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__number">— II —</div>
+                        <h3>Сертификаты на все препараты</h3>
+                        <p>За годы работы мы отобрали самые лучшие бренды препаратов и средств для наших пациентов.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__number">— II —</div>
+                        <h3>Полный спектр услуг</h3>
+                        <p>Все косметологические услуги в одном месте. Мы оказываем полный спектр эстетических процедур.</p>
+                    </div>
+                </div>
+
+                <div class="about__text">
+                    <h3 class="about__heading">О Центре</h3>
+                    <img src="assets/images/2_1_png.webp" alt="Интерьер клиники" class="about__img">
+                    <p>Широкий спектр эстетических, инъекционных и нитевых методик позволяет эффективно и безопасно справляться с самыми сложными и нестандартными задачами, а также поддерживать Ваши молодость и природную красоту.</p>
+                    <div class="about__full-text" id="aboutFullText">
+                        <p>В самом центре города Курск располагается современная клиника косметологии «Студия 7», которая предлагает широкий спектр услуг для улучшения красоты и здоровья кожи. Наша клиника объединяет в себе опытных косметологов, применение передовых технологий и инновационных методик, чтобы удовлетворить потребности каждого клиента.</p>
+                        <p>Мы оказываем полный спектр косметологических процедур, начиная от базовых процедур по уходу за кожей лица и тела, и заканчивая продвинутыми методиками и операциями восстановления и омоложения...</p>
+                        <!-- полный текст будет, кнопка Читать далее -->
+                    </div>
+                    <button class="btn-outline about__more-btn" id="aboutMoreBtn">Читать далее</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== УСЛУГИ (блок, который на десктопе виден весь, без листалки) ==================== -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">Услуги</h2>
+                <p class="services__price-link"><a href="#">Прайс лист</a></p>
+                
+                <!-- Сетка услуг — на десктопе в несколько рядов, на мобиле горизонтальный слайдер (JS) -->
+                <div class="services-grid" id="servicesGrid">
+                    <div class="service-card">Консультация косметолога</div>
+                    <div class="service-card">Чистка лица</div>
+                    <div class="service-card">Биоревитализация</div>
+                    <div class="service-card">Мезотерапия</div>
+                    <div class="service-card">Контурная пластика</div>
+                    <div class="service-card">Ботулинотерапия</div>
+                    <div class="service-card">Лазерная эпиляция</div>
+                    <div class="service-card">RF-лифтинг</div>
+                    <div class="service-card">HIFU-лифтинг</div>
+                    <div class="service-card">Нитевой лифтинг</div>
+                    <div class="service-card">Плазмолифтинг</div>
+                    <div class="service-card">Уходовые процедуры</div>
+                </div>
+                <!-- Стрелки для мобильного слайдера услуг (будут видны только на <=768px) -->
+                <div class="slider-arrows services-arrows" id="servicesArrows">
+                    <button class="arrow arrow-prev" aria-label="Назад">&#10094;</button>
+                    <button class="arrow arrow-next" aria-label="Вперед">&#10095;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== ВРАЧИ (горизонтальный слайдер с хвостом на мобиле) ==================== -->
+        <section id="doctors" class="doctors">
+            <div class="container">
+                <h2 class="section-title">Наша команда</h2>
+                <p class="section-subtitle">Все наши специалисты имеют медицинское образование и стаж более 3 лет. Регулярно проходят повышение квалификации.</p>
+                
+                <div class="doctors-slider-container">
+                    <div class="doctors-track" id="doctorsTrack">
+                        <!-- Карточки врачей — добавляем через JS или сразу жестко -->
+                        <div class="doctor-card">
+                            <div class="doctor-card__img"><img src="assets/images/Sergeyeva.webp" alt="Сергеева Маргарита"></div>
+                            <h3>Сергеева (Зуева) Маргарита Валерьевна</h3>
+                            <p>Главный врач, дерматолог, косметолог</p>
+                        </div>
+                        <div class="doctor-card">
+                            <div class="doctor-card__img"><img src="assets/images/Medvedeva.webp" alt="Медведева Марина"></div>
+                            <h3>Медведева Марина Алексеевна</h3>
+                            <p>Врач дерматолог, косметолог</p>
+                        </div>
+                        <div class="doctor-card">
+                            <div class="doctor-card__img"><img src="assets/images/Korolova.webp" alt="Королёва Ольга"></div>
+                            <h3>Королёва Ольга Олеговна</h3>
+                            <p>Врач дерматолог, косметолог</p>
+                        </div>
+                        <div class="doctor-card">
+                            <div class="doctor-card__img"><img src="assets/images/Gudozhnikova.jpg" alt="Королёва Ольга"></div>
+                            <h3>Гудожникова Анна Алексеевна</h3>
+                            <p>Эстетист, специалист лазерной эпиляции</p>
+                        </div>
+                        <div class="doctor-card">
+                            <div class="doctor-card__img"><img src="assets/images/Makarova.webp" alt="Королёва Ольга"></div>
+                            <h3>Макарова (Соболева) Анна Сергеевна</h3>
+                            <p>Врач дерматолог, косметолог</p>
+                        </div>
+                        <div class="doctor-card">
+                            <div class="doctor-card__img"><img src="assets/images/Kartseva.webp" alt="Королёва Ольга"></div>
+                            <h3>Карцева Анна Алексеевна</h3>
+                            <p>Эстетист, специалист лазерной эпиляции</p>
+                        </div>
+                        <div class="doctor-card">
+                            <div class="doctor-card__img"><img src="assets/images/Ismailova.png" alt="Королёва Ольга"></div>
+                            <h3>Исмаилова Эльвира Хандулаевна</h3>
+                            <p>Врач дерматолог, миколог, косметолог</p>
+                        </div>
+                        <div class="doctor-card">
+                            <div class="doctor-card__img"><img src="assets/images/Kondaurova.jpg" alt="Королёва Ольга"></div>
+                            <h3>Кондаурова Анастасия Юрьевна</h3>
+                            <p>Врач-ординатор</p>
+                        </div>
+                    </div>
+                    <button class="slider-btn slider-btn-prev" id="doctorsPrev">&#10094;</button>
+                    <button class="slider-btn slider-btn-next" id="doctorsNext">&#10095;</button>
+                </div>
+
+                <!-- ФОТО ВСЕХ ВРАЧЕЙ ВМЕСТЕ (с плавным появлением, без резкого рывка) -->
+                <div class="team-photo fade-in-up">
+                    <img src="assets/images/komanda.webp" alt="Коллектив клиники Студия 7">
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== ОБОРУДОВАНИЕ (с кнопкой Подробнее) ==================== -->
+        <section class="equipment">
+            <div class="container">
+                <h2 class="section-title">Оборудование</h2>
+                <p class="section-subtitle">Мы используем оборудование только Премиального сегмента, имеющее признание на мировом уровне.</p>
+                
+                <div class="equipment-list">
+                    <!-- Оборудование 1 -->
+                    <div class="equipment-item">
+                        <img src="assets/images/Virtue RF.webp" alt="Virtue RF">
+                        <h3>Virtue RF</h3>
+                        <p class="equipment-short">Virtue RF — это прорывная технология омоложения, сочетающая микронидлинг, радиочастотную энергию и LED-светотерапию...</p>
+                        <div class="equipment-full" style="display: none;">
+                            <p>Аппарат оснащён интеллектуальными системами подачи энергии и охлаждения, обеспечивая безболезненность и мощный клинический эффект без периода реабилитации. Подходит для лица и тела, всех типов кожи и сезонов. Максимальный клинический эффект. Максимально безопасная технология. Максимальная точность доставки энергии. Гарантия безопасности и эффективности подтверждена сертификатами: FDA (США), СЕ (Европа), MFDS (Корея), МИНЗДРАВ РФ.</p>
+                        </div>
+                        <button class="btn-more" data-more="false">Подробнее</button>
+                    </div>
+                    <!-- Оборудование 2 (Capello) аналогично -->
+                    <div class="equipment-item">
+                        <img src="assets/images/CAPELLO.webp" alt="Capello Bravo">
+                        <h3>CAPELLO Bravo</h3>
+                        <p class="equipment-short">Единственный аппарат в Курске Capello Bravo. Уникальная платформа сочетающая CO₂-лазер и IPL технологию...</p>
+                        <div class="equipment-full" style="display: none;">
+                            <p>CO₂-лазер применяется для решения проблем с растяжками на коже, рубцами и последствиями акне. На аппарате также выполняются процедуры безоперационной лазерной блефаропластики, глубокого омоложения кожи, удаления доброкачественных новообразований. На системе IPL выполняется фотоомоложение, фотолечение сосудистых дефектов, удаление пигментации.</p>
+                        </div>
+                        <button class="btn-more" data-more="false">Подробнее</button>
+                    </div>
+                    <div class="equipment-item">
+                        <img src="assets/images/ULTRAFORMER.webp" alt="Capello Bravo">
+                        <h3>CAPELLO Bravo</h3>
+                        <p class="equipment-short">Аппарат, работающий по технологии HIFU (высокоинтенсивный сфокусированный ультразвук), позволяет добиться SMAS-лифтинга лица и победить локальные жировые ловушки на лице, шее и зоне декольте. Разглаживает глубокие морщины, приподнимает брови, убирает грыжи нижних век, сглаживает проявление носогубных складок, возвращает лицу тонус, уменьшает второй подбородок, рассасывает застойные инфильтративные рубцы постакне.</p>
+                        <div class="equipment-full" style="display: none;">
+                            <p>Аппарат одинаково востребован и в случаях, когда необходимо убрать лишнее, и когда нужно вернуть коже упругость.
+                                Аппарат имеет Регистрационное удостоверение.</p>
+                        </div>
+                        <button class="btn-more" data-more="false">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== БЛОК "МЫ ЗНАЕМ, ЧТО БЕСПОКОИТ" (на мобиле — слайдер) ==================== -->
+        <section class="faq-block">
+            <div class="container">
+                <h2 class="section-title">Мы знаем, что беспокоит наших пациентов!<br><span>Поэтому с радостью ответим на Ваши вопросы</span></h2>
+                
+                <div class="concerns-slider-container" id="concernsSlider">
+                    <div class="concerns-track" id="concernsTrack">
+                        <div class="concern-card">
+                            <h3>Не будет ли хуже?</h3>
+                            <p>Мы профессионалы и гарантируем качество и результат!</p>
+                            <span class="concern-number">1</span>
+                        </div>
+                        <div class="concern-card">
+                            <h3>Это дорого?</h3>
+                            <p>Это частое заблуждение. В нашей клинике стоимость услуг начинается от 1000 р.</p>
+                            <span class="concern-number">2</span>
+                        </div>
+                        <div class="concern-card">
+                            <h3>Специалисты расскажут о процедуре?</h3>
+                            <p>Наши специалисты любят свою профессию! Поэтому с радостью ответят на все вопросы.</p>
+                            <span class="concern-number">3</span>
+                        </div>
+                        <!-- дальше пункты 4,5,6 -->
+                    </div>
+                    <button class="slider-btn slider-btn-prev" id="concernsPrev">&#10094;</button>
+                    <button class="slider-btn slider-btn-next" id="concernsNext">&#10095;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== БРЕНДЫ ==================== -->
+        <section class="brands">
+            <div class="container">
+                <h2 class="section-title">Бренды которые мы используем</h2>
+                <p class="section-subtitle">Эти бренды являются лидерами на мировом рынке эстетической медицины и имеют безупречную репутацию.</p>
+                <div class="brands-grid">
+                    <img src="assets/images/brand1.webp" alt="Juvederm">
+                    <img src="assets/images/brand2.webp" alt="Ipsen">
+                    <img src="assets/images/brand3.webp" alt="Merz Aesthetics">
+                    <img src="assets/images/brand4.webp" alt="Mesopharm">
+                    <img src="assets/images/brand5.webp" alt="Classys">
+                    <img src="assets/images/brand6.webp" alt="Capello">
+                    <img src="assets/images/brand7.webp" alt="Vivacy">
+                    <img src="assets/images/brand8.webp" alt="Jcopula">
+                    <img src="assets/images/brand9.webp" alt="Filorga">
+                    <img src="assets/images/brand10.webp" alt="Femegyl">
+                    <img src="assets/images/brand11.webp" alt="Sesderma">
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== КОНТАКТЫ ==================== -->
+        <section id="contacts" class="contacts">
+            <div class="container contacts__container">
+                <div class="contacts__info">
+                    <h2 class="section-title">Контакты</h2>
+                    <p><a href="tel:+74712305905">+7 (4712) 305-905</a><br>
+                    <a href="tel:+79100225905">+7 (910) 022 59 05</a></p>
+                    <p>Россия, г. Курск, ул. Радищева (ТЦ "Корона") 5 этаж</p>
+                    <p><a href="#" id="parkingLink">Подземная парковка "Европа-50"</a><br>
+                    <a href="#" id="groundParkingLink">Наземная парковка "Новый рынок"</a></p>
+                    <p>ООО "Студия 7"<br>ИНН: 4632260900<br>ОГРН: 1194632012783</p>
+                    <div class="socials">
+                        <a href="#" aria-label="VK">VK</a>
+                    </div>
+                </div>
+                <div class="contacts__map" id="map">
+                    <!-- тут будет карта (можно iframe или потом подключить) -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__links">
+                <a href="/">Главная</a>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Структура и органы управления</a>
+                <a href="#">Вакансии</a>
+                <a href="#">Цены</a>
+            </div>
+            <div class="footer__logo">
+                <img src="assets/images/noroot(С7).webp" alt="Студия 7">
+            </div>
+            <div class="footer__copy">
+                ООО "Медицинский центр "СТУДИЯ 7" Лицензия ЛО-46-01-002307 от 30.06.2020 г.<br>
+                Имеются противопоказания, необходима консультация специалиста.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключаем JS (Никита будет писать логику) -->
+    <script src="js/main.js"></script>
+</body>
+</html>
