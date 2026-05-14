@@ -1,1 +1,340 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-light: #fef9f5;      /* светлый нежный фон */
+            --bg-dark: #2c2a29;       /* тёмный для футера */
+            --accent: #ece4d7;        /* акцентный бежевый */
+            --text-dark: #1e1e1e;
+            --text-muted: #4a4a4a;
+            --border-light: #e2dcd5;
+            --font-main: 'Inter', sans-serif;
+            --font-heading: 'Cormorant', serif;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Типографика — единая */
+        h1, h2, h3, .section-title, .hero__title, .hero__subtitle {
+            font-family: var(--font-heading);
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+
+        .section-title {
+            font-size: 46px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 300;
+            max-width: 700px;
+            margin: 0 auto 60px;
+            color: var(--text-muted);
+        }
+
+        /* HEADER */
+        .header {
+            background: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 90px;
+        }
+        .logo__img {
+            height: 60px;
+            width: auto;
+        }
+        .nav__list {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav__list a {
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+        .nav__list a:hover { color: #b89a7a; }
+        .header__contacts {
+            text-align: right;
+        }
+        .phone {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+        .work-time {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: block;
+        }
+        .burger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .burger span {
+            width: 28px;
+            height: 2px;
+            background: var(--text-dark);
+        }
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 90px;
+            left: 0;
+            width: 100%;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        @media (max-width: 768px) {
+            .nav--desktop, .header__contacts { display: none; }
+            .burger { display: flex; }
+            .mobile-menu.active { display: block; }
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 85vh;
+            background: url('../assets/images/hero-bg.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(238, 226, 221, 0.5);
+        }
+        .hero__content {
+            position: relative;
+            width: 100%;
+        }
+        .hero__title {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .hero__subtitle {
+            font-size: 5rem;
+            font-weight: 600;
+        }
+
+        /* FEATURES (4 колонки) */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .feature-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 16px;
+        }
+        .feature-card__number { font-size: 1.8rem; color: var(--accent); margin-bottom: 1rem; }
+        @media (max-width: 900px) {
+            .features { grid-template-columns: repeat(2,1fr); }
+        }
+        @media (max-width: 550px) {
+            .features { grid-template-columns: 1fr; }
+        }
+
+        /* УСЛУГИ — сетка на десктопе, на мобиле будет слайдером (JS) */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 1.5rem;
+        }
+        .service-card {
+            background: white;
+            padding: 1.2rem;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+        .services-arrows {
+            display: none;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        @media (max-width: 768px) {
+            .services-grid {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                gap: 1rem;
+                scrollbar-width: none;
+            }
+            .service-card {
+                flex: 0 0 80%;
+                scroll-snap-align: start;
+            }
+            .services-arrows { display: flex; }
+        }
+        /* Доктора слайдер (горизонтальный всегда) */
+        .doctors-slider-container {
+            position: relative;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            scroll-behavior: smooth;
+            padding: 1rem 0;
+        }
+        .doctors-track {
+            display: inline-flex;
+            gap: 2rem;
+            white-space: normal;
+        }
+        .doctor-card {
+            width: 280px;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .doctor-card__img img { width: 100%; height: auto; display: block; }
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border: none;
+            font-size: 2rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 40px;
+        }
+        .slider-btn-prev { left: -20px; }
+        .slider-btn-next { right: -20px; }
+
+        /* Фото всех врачей — плавное появление */
+        .team-photo {
+            margin-top: 3rem;
+            text-align: center;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        .team-photo img { max-width: 100%; border-radius: 32px; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ОБОРУДОВАНИЕ (кнопка подробнее) */
+        .equipment-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .equipment-item {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+        .equipment-item img { width: 200px; border-radius: 16px; }
+        .btn-more {
+            background: none;
+            border: 1px solid var(--border-light);
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .equipment-full { margin-top: 0.8rem; width: 100%; }
+
+        /* Блок "беспокоит" - на мобиле слайдер */
+        .concerns-slider-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .concerns-track {
+            display: flex;
+            transition: transform 0.3s;
+        }
+        .concern-card {
+            flex: 0 0 100%;
+            padding: 2rem;
+            background: var(--accent);
+            border-radius: 32px;
+            margin: 0 0.5rem;
+        }
+        @media (min-width: 769px) {
+            .concerns-track { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+            .concern-card { flex: 0 0 calc(33.33% - 1rem); }
+            .concerns-slider-container .slider-btn { display: none; }
+        }
+
+        /* Бренды — адаптивная сетка */
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 2rem;
+            align-items: center;
+        }
+        .brands-grid img {
+            max-width: 140px;
+            object-fit: contain;
+            filter: grayscale(0.2);
+            transition: var(--transition);
+        }
+        @media (max-width: 768px) {
+            .brands-grid { grid-template-columns: repeat(3,1fr); gap: 1rem; }
+            .brands-grid img { max-width: 100px; margin: 0 auto; }
+        }
+
+        /* Контакты */
+        .contacts__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .contacts__map { background: #ddd; min-height: 300px; border-radius: 20px; }
+
+        /* Футер */
+        .footer {
+            background: var(--bg-dark);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .footer__links { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
+        .footer__links a { color: white; text-decoration: none; }
 
